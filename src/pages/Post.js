@@ -4,12 +4,14 @@ import React, { useRef, useState, useEffect } from 'react'
 import {FiUpload} from 'react-icons/fi'
 import mapboxGl from 'mapbox-gl/dist/mapbox-gl.js'
 
+import secrets from '../data/MAP'
+
 export default function Post() {
 
   const map = useRef(null)
   const [coordinates, setCoordinates]= useState({lat: 25.1638, long: 75.8548})
-  mapboxGl.accessToken = process.env.MAP;
-    
+  
+  mapboxGl.accessToken = secrets.key;
   const TextInput = ({label,width}) => 
       <FormControl mt='1vw' w={width || '35vw' }>
       <FormLabel className='input-label'>{label}</FormLabel>
@@ -17,6 +19,7 @@ export default function Post() {
       </FormControl>
 
 useEffect(()=>{
+
   map.current = new mapboxGl.Map({
       container: 'post',
       center: [75.8338, 25.1638],

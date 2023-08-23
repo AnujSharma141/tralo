@@ -5,6 +5,7 @@ import React, { useEffect,useRef, useState } from 'react'
 import mapboxGl from 'mapbox-gl/dist/mapbox-gl.js'
 
 import data from '../data/properties.json'
+import secrets from '../data/MAP'
 
 import Cards from '../components/Cards'
 import ProprtyView from '../components/ProprtyView'
@@ -18,9 +19,9 @@ export default function Explore() {
     const [view , setView] = useState({status: false, data: null})
 
     const list = data
+    mapboxGl.accessToken = secrets.key;
 
     useEffect(()=>{
-    mapboxGl.accessToken = process.env.MAP;
     map.current = new mapboxGl.Map({
         container: 'map',
         center: [75.8338, 25.1638],
