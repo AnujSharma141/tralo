@@ -1,0 +1,79 @@
+body{
+    font-family: 'Inter' !important;
+}
+h2{
+    font-family: 'Inter' !important;
+}
+body::-webkit-scrollbar {
+    width: 0.55vw !important;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 0vw solid slategrey;
+  }
+
+  .cards::-webkit-scrollbar {
+    width: 0vw;
+  }
+   
+  .cards::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0.1vh rgba(0, 0, 0, 0.3);
+  }
+   
+  .cards::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 0.1vw solid slategrey;
+  }
+  .post::-webkit-scrollbar {
+    width: 0.1vw;
+  }
+   
+  .post::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0.1vh rgba(0, 0, 0, 0.3);
+  }
+   
+  .post::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 0.1vw solid darkgrey;
+  }
+
+
+  .input-box{
+    box-shadow: 0 0 18px #ECECEC !important;
+    font-size: 0.9vw !important;
+    background: white !important;
+    border-color: #C1C1C1 !important;
+    padding: 1.5vw 1vw !important;
+
+  }
+  .input-box::placeholder{
+    color: #A8A8A8 !important;
+  }
+  .input-label{
+    font-weight: 400 !important;
+    font-size: 0.89vw !important;
+    color: #7C7C7C !important;
+  }
+
+  .button-primary{
+    padding: 1.5vw 1.5vw !important;
+    font-size: 0.9vw !important;
+    color: white !important;
+    background: black !important;
+    border: 1px solid black !important;
+  }
+  .button-primary:hover{
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid rgb(66, 66, 66) !important;
+  }
+
+  .chk-box > span{
+    font-size: 0.9vw !important;
+    color: #7C7C7C; 
+  }
