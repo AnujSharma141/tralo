@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="880" src="https://i.ibb.co/YbWvV1f/React-App-Google-Chrome-2023-08-24-05-58-56-3.gif" />
+    <img width="880" src="https://i.ibb.co/phVKSNg/image.png" />
 </p>
 
 #
