@@ -77,3 +77,23 @@ body::-webkit-scrollbar {
     font-size: 0.9vw !important;
     color: #7C7C7C; 
   }
+
+  .heading{
+    font-weight: 900 !important;
+  }
+
+  .landing-img{
+
+  }
+
+  .landing-img::after{
+    display: block;
+    content: '.';
+    width: 70vw;
+    height: 65vh;
+    background: rgba(41, 41, 41,0.5);
+    z-index: 0;
+    border-radius: 1vw;
+    position: absolute;
+  }
+  

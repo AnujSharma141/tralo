@@ -1,26 +1,55 @@
 import React, { useState } from 'react'
-import { Card, Image, Stack, CardBody, Heading, Text, CardFooter, Button, Box, Flex, Container, Input, color, FormControl, Divider, AbsoluteCenter, InputGroup, InputLeftElement, InputLeftAddon, PinInput, HStack, PinInputField, FormLabel } from '@chakra-ui/react'
+import { Card, Image, Stack, CardBody, Heading, Text, CardFooter, Button, Box, Flex, Container, Input, color, FormControl, Divider, AbsoluteCenter, InputGroup, InputLeftElement, InputLeftAddon, PinInput, HStack, PinInputField, FormLabel, FormErrorMessage, useToast } from '@chakra-ui/react'
 import branding from '../assets/img/branding_light.png'
 import { FcGoogle } from "react-icons/fc"
+import { useFormik, validateYupSchema } from 'formik'
+import * as Yup from 'yup'
 
 export default function Login(props) {
   const [requested, setRequested] = useState(false)
+  const toast = useToast()
+  
+  const PhoneShema = Yup.object().shape({
+    phone:Yup.number().max(9999999999, 'Invalid Phone Number').min(1000000000, 'Invalid Phone Number')
+  })
 
-  const PhoneInput = () => <FormControl mt='2.5vw'>
+
+  const formik = useFormik({
+    initialValues: {
+      phone: '..........',
+    },
+    onSubmit: (values)=>{
+      toast({
+        title: 'OTP Sent'  ,
+        description: "OTP was sent to " + values.phone,
+        status: 'success',
+        variant: 'subtle',
+        duration: 6000,
+        isClosable: true,
+      })
+      setRequested(true)
+    },
+    validationSchema: PhoneShema
+  })
+
+  const isError = formik.values.phone > 9999999999 || formik.values.phone < 1000000000
+
+  const PhoneInput = () => 
+      <form mt='2.5vw' onSubmit={formik.handleSubmit}>
+        <FormControl isInvalid={isError}>
         <Box mt='2vw'>
-        <FormControl>
         <FormLabel className='input-label'>Phone Number</FormLabel>
         <InputGroup>
         <InputLeftAddon children='+91' padding='1.5vw 1vw' borderColor='#C1C1C1' />
-        <Input required className='input-box' width='20vw' placeholder='enter your phone number'></Input>
+        <Input validate={PhoneShema} type='number' id='phone' autoFocus required onChange={formik.handleChange} value={formik.values.phone}  className='input-box' width='20vw' placeholder='enter your phone number' />
         </InputGroup>
-        </FormControl>
-        
+        {isError? <FormErrorMessage>Invalid Phone Number</FormErrorMessage>: ''}
       </Box>
-      <Button className='button-primary' type='submit' onClick={()=>setRequested(true)} mt='2vw' >
+      <Button className='button-primary' type='submit' mt='2vw' >
         Continue
       </Button>
       </FormControl>
+      </form>
 
   const OtpInput = ()=><FormControl mt='2.5vw' >
         <Box mt='2vw'>
