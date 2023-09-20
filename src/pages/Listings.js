@@ -18,11 +18,11 @@ import React from 'react'
 
 export default function Listings() {
   return (
-    <Box w='84vw' ml='8vw' mt='3vw'>
-      <Text fontSize='2vw'>Your Properties</Text>
+    <Box w='84vw' ml='8vw' mt='8vw'>
+      <Text fontSize='1.5vw' fontWeight='normal'>Your Properties</Text>
       <TableContainer  mt='2vw'>
-  <Table  w='84vw' size='lg' borderColor='gray.100' bg='white' borderRadius='0.75vw' variant='simple' > 
-    <Thead >
+  <Table bg='#fff'  w='84vw' size='lg' borderColor='gray.100'  borderRadius='0.75vw' variant='simple' > 
+    <Thead>
       <Tr fontSize='0.9vw' fontWeight='semibold' color='black' fontFamily='inter'>
         <Td >NAME</Td>
         <Td >ADDRESS</Td>
@@ -35,7 +35,7 @@ export default function Listings() {
       </Tr>
     </Thead>
     <Tbody>
-      <Tr borderColor='gray.100' color='gray.600'>
+      <Tr borderColor='gray.500' color='gray.600'>
         <Td>Ridhi Mansions</Td>
         <Td>Kunhadi, Kota, RJ</Td>
         <Td>800000</Td>

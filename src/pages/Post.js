@@ -4,6 +4,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import {FiUpload} from 'react-icons/fi'
 import mapboxGl from 'mapbox-gl/dist/mapbox-gl.js'
 
+import TextInput from '../core/Input'
 import secrets from '../data/MAP'
 
 export default function Post() {
@@ -12,11 +13,6 @@ export default function Post() {
   const [coordinates, setCoordinates]= useState({lat: 25.1638, long: 75.8548})
   
   mapboxGl.accessToken = secrets.key;
-  const TextInput = ({label,width}) => 
-      <FormControl mt='1vw' w={width || '35vw' }>
-      <FormLabel className='input-label'>{label}</FormLabel>
-      <Input className='input-box' mt={width?'0vw':'0.2vw'} type='text' />
-      </FormControl>
 
 useEffect(()=>{
 
@@ -29,8 +25,7 @@ useEffect(()=>{
   
 
   return (
-    <Box w='80vw' ml='11vw' mt='3vw'>
-      <Text fontSize='2vw'>List A Property</Text>
+    <Box w='80vw' ml='11vw' mt='10vw'>
     <Flex mt='2vw'>
 
       <Box>
@@ -44,7 +39,7 @@ useEffect(()=>{
       </Box>
 
       <Box>
-      <Box className='post' ml='4vw' h='60vh' overflowY='scroll' overflowX='hidden' pr='3vw'>
+      <Box className='post' ml='4vw' h='62vh' overflowY='scroll' overflowX='hidden' pr='3vw'>
       
       <form>
       <Text>Property Details</Text>
@@ -82,7 +77,7 @@ useEffect(()=>{
       </form>
       
       </Box>
-      <Box w='39vw' display='flex' justifyContent='flex-end'>
+      <Box w='39vw' p='1vw 0' display='flex' justifyContent='flex-end'>
         <Button w='6vw' ml='4vw' className='button-primary' >Post</Button>
         </Box>
       

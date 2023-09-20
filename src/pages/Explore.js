@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Input } from '@chakra-ui/react'
+import { Box, Flex} from '@chakra-ui/react'
 
 import React, { useEffect,useRef, useState } from 'react'
 
@@ -7,8 +7,9 @@ import mapboxGl from 'mapbox-gl/dist/mapbox-gl.js'
 import data from '../data/properties.json'
 import secrets from '../data/MAP'
 
-import Cards from '../components/Cards'
-import ProprtyView from '../components/ProprtyView'
+import Cards from '../components/Explore/Cards'
+import ProprtyView from '../components/Explore/ProprtyView'
+import Filters from '../components/Explore/Filters'
 
 
 export default function Explore() {
@@ -48,26 +49,16 @@ export default function Explore() {
 
 return (
 <>
-<Box overflowY='hidden' w='96vw'>
+<Box className='explore-layout'>
     <Flex>
-        
-        <Box ml='4vw' mt='3vw' w='40vw' bg='#F1F1F1'> 
-            <Center>
-            <Box w='40vw'>
-
-            <Box position='fixed' bg='#F1F1F1' zIndex='1'> 
-                <Input  fontSize='0.9vw' boxShadow='0 0 18px #ECECEC' background='white' borderColor='#C1C1C1' bgColor='white' padding='1.5vw 1vw' width='30vw' placeholder='search city ...' _placeholder={{color: '#A8A8A8'}}></Input>
-            </Box>
-
+        <Box className='explore-content'> 
+            <Filters />
             <Cards list={list} center={setCoordinates} select={setView} zoom={setZoom} toggle={marker} />
-            </Box>
-            </Center>
-        </Box>
+        </Box> 
         
-        <Box position='fixed' zIndex='1' top='0vw' right='0vw' id='map' h='100vh' bg='black' w='50vw'>
+        <Box id='map' className='explore-map'>
             {view.status? <ProprtyView view={view} close={setView} />:null}
         </Box>
-
     </Flex>
 </Box> 
 </>
