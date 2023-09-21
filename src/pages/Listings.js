@@ -18,12 +18,12 @@ import React from 'react'
 
 export default function Listings() {
   return (
-    <Box w='84vw' ml='8vw' mt='8vw'>
-      <Text fontSize='1.5vw' fontWeight='normal'>Your Properties</Text>
+    <Box w='84vw' ml='8vw' className='list-layout'>
+      <Text className='list-title' fontWeight='normal'>Your Properties</Text>
       <TableContainer  mt='2vw'>
   <Table bg='#fff'  w='84vw' size='lg' borderColor='gray.100'  borderRadius='0.75vw' variant='simple' > 
     <Thead>
-      <Tr fontSize='0.9vw' fontWeight='semibold' color='black' fontFamily='inter'>
+      <Tr className='post-checkbox-text' fontWeight='semibold' color='black' fontFamily='inter'>
         <Td >NAME</Td>
         <Td >ADDRESS</Td>
         <Td >PRICE</Td>

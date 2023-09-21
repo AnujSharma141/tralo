@@ -30,15 +30,15 @@ body::-webkit-scrollbar {
     background-color: darkgrey;
     outline: 0.1vw solid slategrey;
   }
-  .post::-webkit-scrollbar {
+  .post-form::-webkit-scrollbar {
     width: 0.1vw;
   }
    
-  .post::-webkit-scrollbar-track {
+  .post-form::-webkit-scrollbar-track {
     box-shadow: inset 0 0 0.1vh rgba(0, 0, 0, 0.3);
   }
    
-  .post::-webkit-scrollbar-thumb {
+  .post-form::-webkit-scrollbar-thumb {
     background-color: darkgrey;
     outline: 0.1vw solid darkgrey;
   }
@@ -522,8 +522,61 @@ body::-webkit-scrollbar {
   margin-right: 1vw;
 }
 
+.post-flex{
+  margin-top: 2vw;
+}
+.post-form{
+  margin-left: 4vw;
+  height: 62vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 3vw;
+}
+.post-button-container{
+  width: 39vw;
+  padding: 1vw 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.post-image-upload{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1vw;
+  width: 37vw;
+  height: 20vh;
+  background-color: #dedede;
+  border: 1px dashed #bfbfbf;
+  border-radius: 0.5vw;
+}
+.post-map-mark{
+  margin-top: 1vw;
+  width: 37vw;
+  height: 30vh;
+  border-radius: 0.5vw;
+  border: 1px solid #bfbfbf;
+}
+.post-select-input{
+  width: 17vw;
+}
+.post-input-row{
+  width: 35vw;
+}
+.post-checkbox-text{
+  font-size: 0.9vw;
+}
+.post-button{
+  width:6vw; 
+  margin-left:4vw;
+}
 
-
+.list-layout{
+  margin-top: 8vw;
+}
+.list-title{
+  font-size: 1.5vw;
+}
 @media (max-width: 768px) {
   
   .button-primary{
@@ -704,7 +757,7 @@ body::-webkit-scrollbar {
 }
 
 .login-background-image {
-  height: 30vh;
+  height: 26vh;
   width: 100vw;
 }
 
@@ -773,13 +826,13 @@ body::-webkit-scrollbar {
 }
 .explore-content{
   margin-left: 4vw;
-  margin-top: 44vh;
+  margin-top: 40vh;
   width: 100vw !important;
 }
 .explore-map{
   top: 5.5vh;
   right: 0;
-  height: 38vh;
+  height: 34vh;
   width: 100vw;
 }
 .explore-filters{
@@ -864,7 +917,7 @@ body::-webkit-scrollbar {
   z-index: 3;
   width: 90vw;
   margin-left: 5vw;
-  margin-top: 12vh !important;
+  margin-top: 10vh !important;
   padding-top: 0;
   border-radius: 2vw;
   height: 22vh !important;
@@ -912,5 +965,59 @@ body::-webkit-scrollbar {
   margin-right: 2vw;
 }
 
-
+.post-flex{
+  display: flex;
+  margin-top: 20vw !important;
+  flex-direction: column-reverse;
+  margin-bottom: 70vw;
+}
+.post-form{
+  margin-left: 0vw;
+  height: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 3vw;
+}
+.post-button-container{
+  width: 39vw;
+  padding: 1vw 0;
+  display: flex;
+  justify-content: flex-start;
+position: absolute;
+margin-top: 124vw;
+}
+.post-image-upload{
+  width: 70vw;
+  border-radius: 1vw;
+  height: 16vh;
+}
+.post-map-mark{
+  margin-top: 2vw;
+  width: 70vw;
+  height: 30vh;
+  border-radius: 1vw;
+}
+.post-select-input{
+  width: 9vw !important;
+}
+.post-button{
+  width:20vw; 
+  margin-left:0vw;
+}
+.post-input-row{
+  width:54vw;
+}
+.post-checkbox-text{
+  font-size: 2.7vw;
+}
+.input-box-small{
+  width: 34vw !important;
+}
+.list-layout{
+  margin-top: 20vw;
+}
+.list-title{
+  font-size: 4vw;
+  margin-bottom: 10vw;
+}
 }

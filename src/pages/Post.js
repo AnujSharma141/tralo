@@ -25,30 +25,30 @@ useEffect(()=>{
   
 
   return (
-    <Box w='80vw' ml='11vw' mt='10vw'>
-    <Flex mt='2vw'>
+    <Box w='80vw' ml='11vw' mt='10vw' className='post-layout'>
+    <Flex className='post-flex'>
 
-      <Box>
-      <Text>Add Property Images</Text>
-      <Box display='flex' flexDirection='column' alignItems='center' justifyContent='center' mt='1vw' w='37vw' h='20vh' bg='#dedede' border='1px dashed #bfbfbf' borderRadius='0.5vw'>
-      <Box ><FiUpload size='1.4vw'/></Box>
-      <Text mt='0.6vw'>Upload Images</Text>
-      </Box>
-      <Text mt='2vw'>Mark Property Location</Text>
-      <Box mt='1vw' w='37vw' h='30vh'  border='1px solid #bfbfbf' id='post' borderRadius='0.5vw'></Box>
+      <Box className='post-attachments'>
+        <Text>Add Property Images</Text>
+        <Box className='post-image-upload'>
+        <Box ><FiUpload size='1.4vw'/></Box>
+        <Text mt='0.6vw'>Upload Images</Text>
+        </Box>
+        <Text mt='2vw'>Mark Property Location</Text>
+        <Box className='post-map-mark' id='post' ></Box>
       </Box>
 
-      <Box>
-      <Box className='post' ml='4vw' h='62vh' overflowY='scroll' overflowX='hidden' pr='3vw'>
+      <Box className='post-fields'>
+      <Box className='post-form'>
       
       <form>
       <Text>Property Details</Text>
       <TextInput label="Name"/>
 
-      <Box display='flex' justifyContent='space-between' w='35vw'>
-      <Box mt='1vw' w='17vw'>
+      <Box display='flex' justifyContent='space-between' className='post-input-row'>
+      <Box className='input-control post-select-input'>
       <FormLabel className='input-label'>Size</FormLabel>
-      <Select className='input-box'>
+      <Select className='input-box input-box-small'>
       <option value='option1'>1 BHK</option>
       <option value='option2'>2 BHK</option>
       <option value='option3'>3 BHK</option>
@@ -58,7 +58,7 @@ useEffect(()=>{
   
       <TextInput label="Address"/>
 
-      <Flex w='35vw' justify='space-between'> 
+      <Flex className='post-input-row' justify='space-between'> 
       <TextInput width='17vw' label="City"/>   
       <TextInput width='17vw' label="State"/>   
       </Flex>
@@ -71,18 +71,19 @@ useEffect(()=>{
       <TextInput label="Email"/>
 
       <Checkbox defaultChecked  mb='3vw' className='chk-box' mt='3vw' ml='0.2vw' sx={{'[data-checked]':{borderColor: "#000"}}}>
-      I agree the Terms and Conditions
+      <Text className='post-checkbox-text'>I agree the Terms and Conditions</Text>
       </Checkbox>
-      
+  
       </form>
       
       </Box>
-      <Box w='39vw' p='1vw 0' display='flex' justifyContent='flex-end'>
-        <Button w='6vw' ml='4vw' className='button-primary' >Post</Button>
-        </Box>
+      <Box className='post-button-container'>
+        <Button  className='button-primary post-button' >Post</Button>
+      </Box>
       
       
       </Box>
+
       </Flex>
       </Box>
   )
