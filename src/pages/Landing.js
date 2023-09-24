@@ -1,7 +1,9 @@
-import { Flex, Box, Text, Center, Button, Img } from '@chakra-ui/react'
+import { Flex, Box, Text, Center, Button, Img, Image } from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import branding_light from '../assets/img/branding_light.png'
+import section_graphic from '../assets/img/section_graphic.png'
+import landing_display from '../assets/img/landing-display.png'
 
 import { IoChatbubbleEllipsesOutline, IoEarthOutline, IoLogoGithub, IoLogoTwitter, IoMapOutline, IoSearchOutline } from 'react-icons/io5'
 
@@ -29,14 +31,18 @@ export default function Landing() {
               </Flex>
             </Flex>
 
-              <Text className='landing-hero-heading'>Find Your<br /> Perfect Home.</Text>
+              <Text className='landing-hero-heading'>Find your<br /> Perfect home.</Text>
               <Text className='landing-hero-text'>Start expolring apartments near you.</Text>
-              <Link to='/app'><Button className='button-secondary'>Get Started</Button></Link>
+
           </Box>
         </Box>
+        <a name='explore' />
+        <Image src={landing_display} className='landing-display-img'  />
+        <Text className='landing-display-text'>Explore a World of Premier Properties</Text>
 
-        <Text className='landing-display-text'>Experience the future of property hunting through our user-friendly interface, where finding your perfect space is just a tap away.</Text>
-
+        <Text className='landing-hero-heading landing-display-heading' color='black' mt='1vw'>discover your dream home.</Text>
+        <Link to='/app'><Button className='button-primary landing-display-button'>Get Started</Button></Link>        
+      
         <a name='features'></a>
         <Box className='landing-features'>
           {features.map(item => (
@@ -49,7 +55,8 @@ export default function Landing() {
         </Box>
 
         <Flex className='landing-section'>
-          <Text className='landing-section-text'>List your property with tralo.</Text>
+          <Text className='landing-section-text'>Experience the future of property hunting through our user-friendly interface, where finding your perfect space is just a tap away.</Text>
+          <Image src={section_graphic} className='landing-section-graphic'/>
         </Flex>
 
 

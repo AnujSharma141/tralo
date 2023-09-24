@@ -9,7 +9,7 @@ export default function NavMenu(props) {
     <Flex zIndex='3' justify='flex-end'>  
     <Menu w='10vw'  zIndex='3'>
     <MenuButton className='nav-menu' bg='white' border='1px solid #ECECEC' as={Button} rightIcon={<IoChevronDownOutline />} zIndex='3'>
-    Anuj
+    User
     </MenuButton>
     <MenuList fontFamily='inter' justifyContent='flex-end' className='nav-menu-list' zIndex='3'>
         <Link to='/app'><MenuItem>Explore</MenuItem></Link> 

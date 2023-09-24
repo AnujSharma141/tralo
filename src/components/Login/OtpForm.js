@@ -1,8 +1,23 @@
-import { Box, Button, FormControl, HStack, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, PinInput, PinInputField, Text, useDisclosure } from '@chakra-ui/react'
+import { Box, Button, FormControl, HStack, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, PinInput, PinInputField, Text, useDisclosure, useToast } from '@chakra-ui/react'
 import React from 'react'
 
 export default function OtpForm({login, validate, setLogin, setRequested}) {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const toast = useToast()
+  const createUser = () => {
+    toast({
+      containerStyle:{
+        margin: '2vw',
+      },
+      title: 'Account Created'  ,
+      description: "",
+      status: 'success',
+      variant: 'subtle',
+      position:'bottom-right',
+      duration: 6000,
+      isClosable: true,
+    })
+  }
+  
   return (
     <FormControl mt='2.5vw' >
         <Box mt='2vw'>
@@ -17,18 +32,8 @@ export default function OtpForm({login, validate, setLogin, setRequested}) {
             </PinInput>
           </HStack>
         </Box>
-        <Button className='button-primary login-form-button' type='submit' onClick={login?()=>validate(): ()=>{onOpen(); setLogin(true); setRequested(false)}}   mt='2vw' >Verify</Button>
+        <Button className='button-primary login-form-button' type='submit' onClick={login?()=>validate(): ()=>{createUser(); setLogin(true); setRequested(false)}}   mt='2vw' >Verify</Button>
 
-        <Modal onClose={onClose} isOpen={isOpen} isCentered>
-        <ModalOverlay />
-        <ModalContent bg='#f7f7f7' p='1vw'>
-          <ModalHeader>Welcome to Tralo</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-          <Text>Some Text Here.</Text>
-          </ModalBody>
-        </ModalContent>
-      </Modal>
       </FormControl>
   )
 }

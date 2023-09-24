@@ -9,12 +9,12 @@ export default function Filters() {
             <MenuButton bg='white' className='filter-menu' rightIcon={<IoChevronDownOutline />} as={Button}>
                 Price
             </MenuButton>
-            <MenuList>
-                <MenuItem>Download</MenuItem>
-                <MenuItem>Create a Copy</MenuItem>
-                <MenuItem>Mark as Draft</MenuItem>
-                <MenuItem>Delete</MenuItem>
-                <MenuItem>Attend a Workshop</MenuItem>
+            <MenuList>                
+                <MenuItem>All</MenuItem>
+                <MenuItem>20,000+</MenuItem>
+                <MenuItem>50,000+</MenuItem>
+                <MenuItem>75,000+</MenuItem>
+
             </MenuList>
             </Menu> 
             
@@ -23,11 +23,9 @@ export default function Filters() {
                 Size
             </MenuButton>
             <MenuList>
-                <MenuItem>Download</MenuItem>
-                <MenuItem>Create a Copy</MenuItem>
-                <MenuItem>Mark as Draft</MenuItem>
-                <MenuItem>Delete</MenuItem>
-                <MenuItem>Attend a Workshop</MenuItem>
+                <MenuItem>1 BHK</MenuItem>
+                <MenuItem>2 BHK</MenuItem>
+                <MenuItem>3 BHK</MenuItem>
             </MenuList>
             </Menu> 
             

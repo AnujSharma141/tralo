@@ -18,9 +18,9 @@ export default function LoginForm({setRequested, setLogin}) {
             containerStyle:{
               margin: '2vw',
             },
-            title: 'OTP Sent'  ,
-            description: "OTP was sent to " + values.phone,
-            status: 'success',
+            title: "Mock OTP ",
+            description: "enter 1234",
+            status: 'info',
             variant: 'subtle',
             position:'bottom-right',
             duration: 6000,
@@ -41,7 +41,7 @@ export default function LoginForm({setRequested, setLogin}) {
         <FormLabel className='input-label'>Phone Number</FormLabel>
         <InputGroup className='phone-input'>
         <InputLeftAddon children='+91' className='phone-input-addon' />
-        <Input validate={PhoneSchema} type='number' id='phone' required onChange={formik.handleChange} value={formik.values.phone}  className='input-box' width='20vw' placeholder='Enter your phone number' />
+        <Input validate={PhoneSchema} autoComplete='off' type='number' id='phone' required onChange={formik.handleChange} value={formik.values.phone}  className='input-box' width='20vw' placeholder='Enter your phone number' />
         </InputGroup>
         {isError? <FormErrorMessage>Invalid Phone Number</FormErrorMessage>: ''}
       </Box>
