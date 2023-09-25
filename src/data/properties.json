@@ -10,7 +10,7 @@
             "mail": "john@mail.com",
             "contact": "123456798"
         },
-        "price": "25000",
+        "price": "30000",
         "property": "2",
         "url": "https://images.unsplash.com/photo-1569152811536-fb47aced8409?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
         "city": "Kota",
@@ -28,8 +28,8 @@
             "mail": "mike@mail.com",
             "contact": "123456798"
         },
-        "price": "40000",
-        "property": "3",
+        "price": "55000",
+        "property": "2",
         "url": "https://images.unsplash.com/photo-1619440321956-eeff53f649b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
         "city": "Kota",
         "state": "RJ",
@@ -46,7 +46,7 @@
             "mail": "marcus@mail.com",
             "contact": "123456798"
         },
-        "price": "40000",
+        "price": "80000",
         "property": "3",
         "url": "https://images.unsplash.com/photo-1619440321956-eeff53f649b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
         "city": "Kota",

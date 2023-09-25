@@ -35,7 +35,7 @@ useEffect(()=>{
       marker.current.on('dragend', onDragEnd);
 },[])
   return (
-    <Box w='80vw' ml='11vw' mt='10vw' className='post-layout'>
+    <Box w='80vw' ml='11vw' mt='8vw' className='post-layout'>
     <Flex className='post-flex'>
 
       <Box className='post-attachments'>

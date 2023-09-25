@@ -133,7 +133,7 @@ body::-webkit-scrollbar {
     padding: 0.5vw 1.5vw !important;
     font-weight: 500 !important;
     font-size: 0.9vw !important;
-    border: 0px solid #d3d3d3 !important;  
+    border: 1px solid #d3d3d3 !important;  
   }
 
   .nav-menu-list{
@@ -347,9 +347,9 @@ body::-webkit-scrollbar {
   top: 0;
   z-index: 2;
   width: 100vw;
-  border-bottom: 1px solid #dedede;
-  padding: 1vw 2vw;
-  background-color: white;
+  border-bottom: 0px solid #dedede;
+  padding: 2vw 2vw;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -574,6 +574,7 @@ body::-webkit-scrollbar {
 .post-button-container{
   width: 39vw;
   padding: 1vw 0;
+  margin-top: 2vw;
   display: flex;
   justify-content: flex-end;
 }
@@ -695,7 +696,7 @@ body::-webkit-scrollbar {
     padding: 0.5vw 1.5vw !important;
     font-weight: 500 !important;
     font-size: 3vw !important;
-    border: 0px solid #d3d3d3 !important;  
+    border: 1px solid #d3d3d3 !important;  
   }
   .nav-menu-list{
     font-size: 3vw;

@@ -1,8 +1,10 @@
 import { Box, Menu, Button, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
 import React from 'react'
 import {IoChevronDownOutline} from 'react-icons/io5'
+import {filterBySize, filterByPrice} from '../../core/utils/helpers'
 
-export default function Filters() {
+export default function Filters({properties, filter}) {
+ console.log(properties)
   return (
     <Box className='explore-filters'> 
             <Menu>
@@ -10,10 +12,10 @@ export default function Filters() {
                 Price
             </MenuButton>
             <MenuList>                
-                <MenuItem>All</MenuItem>
-                <MenuItem>20,000+</MenuItem>
-                <MenuItem>50,000+</MenuItem>
-                <MenuItem>75,000+</MenuItem>
+                <MenuItem onClick={()=>filter(properties)}>All</MenuItem>
+                <MenuItem onClick={()=>filter(filterByPrice(properties, 20000))}>20,000+</MenuItem>
+                <MenuItem onClick={()=>filter(filterByPrice(properties, 50000))}>50,000+</MenuItem>
+                <MenuItem onClick={()=>filter(filterByPrice(properties, 75000))}>75,000+</MenuItem>
 
             </MenuList>
             </Menu> 
@@ -23,9 +25,9 @@ export default function Filters() {
                 Size
             </MenuButton>
             <MenuList>
-                <MenuItem>1 BHK</MenuItem>
-                <MenuItem>2 BHK</MenuItem>
-                <MenuItem>3 BHK</MenuItem>
+                <MenuItem onClick={()=>filter(properties)}>All</MenuItem>
+                <MenuItem onClick={()=>filter(filterBySize(properties,2))}>2 BHK</MenuItem>
+                <MenuItem onClick={()=>filter(filterBySize(properties,3))}>3 BHK</MenuItem>
             </MenuList>
             </Menu> 
             
