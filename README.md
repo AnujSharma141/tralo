@@ -1,8 +1,3 @@
-<p align="center">
-    <img width="880" src="https://i.ibb.co/J2Hn44f/image.png" />
-</p>
-
-#
 
 Real Estate Application Frontend.
 
