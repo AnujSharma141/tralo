@@ -1,4 +1,4 @@
-import { Flex, Box, Text, Center, Button, Img, Image } from '@chakra-ui/react'
+import { Flex, Box, Text, Center, Button, Img, Image, Tag } from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import branding_light from '../assets/img/branding_light.png'
@@ -30,9 +30,9 @@ export default function Landing() {
                 <a href='#contact'>contact</a>
               </Flex>
             </Flex>
-
-              <Text className='landing-hero-heading'>Find your<br /> Perfect home.</Text>
-              <Text className='landing-hero-text'>Start expolring apartments near you.</Text>
+              <Tag className='landing-tag'>search apartments nearby you.</Tag>
+              <Text className='landing-hero-heading'>find your<br /> perfect home.</Text>
+              <Link to='/app'><Button className='button-primary landing-display-button'>Get Started</Button></Link> 
 
           </Box>
         </Box>
@@ -41,7 +41,7 @@ export default function Landing() {
         <Text className='landing-display-text'>Explore a World of Premier Properties</Text>
 
         <Text className='landing-hero-heading landing-display-heading' color='black' mt='1vw'>discover your dream home.</Text>
-        <Link to='/app'><Button className='button-primary landing-display-button'>Get Started</Button></Link>        
+        <Link to='/login'><Button className='button-primary landing-display-button'>Create Account</Button></Link>        
       
         <a name='features'></a>
         <Box className='landing-features'>

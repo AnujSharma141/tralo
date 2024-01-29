@@ -12,7 +12,7 @@ import Post from './pages/Post'
 import Dashboard from './pages/Dashboard'
 
 export default function App() {
-  const [auth, setAuth] = useState(false)
+  const [auth, setAuth] = useState(true)
 
   const validatingAuth = ()=>{
     setAuth(true)
@@ -28,18 +28,21 @@ export default function App() {
     <ChakraProvider>
       <Routes>
         <Route path="/" element={ <Landing /> } />
+
+        <Route path="/login" element={<Login validate={validatingAuth}  /> } />
+
         <Route path="/app" element={<Center>
-        {auth?<Dashboard logout={logOut} component={<Explore/>}/>:<Login validate={validatingAuth} />}
+        {<Dashboard logout={logOut} component={<Explore/>}/>}
         </Center>
         }/>
 
         <Route path="/post" element={<Center>
-        {auth?<Dashboard logout={logOut} component={<Post/>}/>:<Login validate={validatingAuth} />}
+        {<Dashboard logout={logOut} component={<Post/>}/>}
         </Center>
         }/>
 
         <Route path="/listings" element={<Center>
-        {auth?<Dashboard logout={logOut} component={<Listings/>}/>:<Login validate={validatingAuth} />}
+        {<Dashboard logout={logOut} component={<Listings/>}/>}
         </Center>
         }/>
     

@@ -94,6 +94,7 @@ body::-webkit-scrollbar {
     color: white !important;
     background: black !important;
     border: 1px solid black !important;
+    border-radius: 4vw !important;
   }
   .button-primary:hover{
     background-color: #eeeeee !important;
@@ -108,6 +109,7 @@ body::-webkit-scrollbar {
     font-size: 0.9vw !important;
     color: black !important;
     border: 1px solid #d3d3d3 !important;
+    border-radius: 4vw !important;
   }
   .button-secondary:hover{
     color: white !important;
@@ -125,6 +127,7 @@ body::-webkit-scrollbar {
   .filter-menu{
     padding: 0.5vw 1.5vw !important;
     font-weight: 500 !important;
+    border-radius: 10vw !important;
     font-size: 0.9vw !important;
     border: 1px solid #d3d3d3;
   }
@@ -149,10 +152,10 @@ body::-webkit-scrollbar {
   .landing-nav{
     display: flex;
     align-items: center;
-    width: 100vw;
+    width: 94vw;
     justify-content: space-between;
     padding: 2vw 0 0 5vw;
-    margin-top: 1vw;
+    margin-top: 0.5vw;
   }  
   .landing-nav-menu{
     width: 40vw;
@@ -168,19 +171,24 @@ body::-webkit-scrollbar {
     width: 6vw;
   }
   .landing-hero{
-    background: url(https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2067&q=80);
-    background-position: top;
+    background: url(https://images.unsplash.com/photo-1633119712778-30d94755de54?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: bottom;
     background-size: cover;
-    height: 100vh;
+    width: 94vw;
+    border-radius: 1vw;
+    margin-top: 5vh;
+    height: 90vh;
     overflow-x: hidden;
   }
   .landing-hero::after{
     display: block;
     content: '.';
-    width: 100vw; 
-    height: 100vh;
+    width: 94vw; 
+    height: 90vh;
+    margin-top: 5vh;
     z-index: 0;
-    background: rgba(19, 27, 49, 0.282);
+    background: rgba(0, 0, 0, 0.492);
+    border-radius: 1vw;
     z-index: 0;
     top: 0;
     position: absolute;
@@ -192,40 +200,49 @@ body::-webkit-scrollbar {
       flex-direction: column;
       align-items: center;
     } 
+    .landing-tag{
+      margin-top: 9vw;
+      background: #ffffffbb !important;
+      border-radius: 3vw !important;
+      margin-bottom: 1vw;
+      font-size: 0.85vw !important;
+    }
     .landing-hero-text{
-      margin-top: 1vw;
-      font-size: 0.9vw;
+      margin-top: 2vw;
+      font-size: 1vw;
       text-align: center;
       margin-bottom: 2vw;
-      color: white;
+      color: rgb(0, 0, 0);
     }
     .landing-hero-heading{
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: bold;
-    font-size: 8vh;
-    margin-top: 25vw;
+    font-size: 9vh;
+    font-family: 'Sora';
+
     margin-bottom: 0vw;
     font-weight: 700 !important;
-    font-family: 'Sora';
+
   }
 
   .landing-display-text{
     margin-top: 4vw;
     width: 33vw;
-    color: black;
+    color: rgb(185, 185, 185);
     text-align: center;
     line-height: 3vw;
-    font-size: 1.2vw;
+    font-size: 1vw;
   }
   .landing-display-heading{
     margin-top: 0.5vw !important;
+    font-size: 4vw !important;
   }
   .landing-display-button{
     margin-top: 4vw;
   }
   .landing-display-img{
-    width: 32vw;
+    width: 33vw;
     margin-top: 8vw;
   }
   .landing-features{
@@ -248,15 +265,15 @@ body::-webkit-scrollbar {
     border: 1px solid #e8e8e8;
   }
   .landing-feature-title {
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     margin-top: 1.5vw;
   }
   .landing-feature-text {
     line-height: 2vw;
-    color: grey;
-    width: 17vw;
+    color: rgb(180, 180, 180);
+    width: 16vw;
     margin-top: 1vw;
-    font-size: 0.98vw;
+    font-size: 0.93vw;
   }  
 
   .landing-section {
@@ -301,11 +318,10 @@ body::-webkit-scrollbar {
 
 
 .footer-title {
-  font-size: 3.5vw;
-  width: 50vw;
+  font-size: 3vw;
+  width: 40vw;
   text-align: center;
-  font-family: sora;
-  font-weight: bold;
+  font-weight: 700;
   margin-top: 10vw;
 }
 
@@ -336,8 +352,8 @@ body::-webkit-scrollbar {
 
 
 .app-layout{
-  background-color: #F7FAFC;
   min-height: 100vh;
+  background-color: #f7f7f7;
   overflow: hidden;
   width: 100vw;
 }
@@ -346,16 +362,17 @@ body::-webkit-scrollbar {
   position: fixed;
   top: 0;
   z-index: 2;
+  background: black !important;
   width: 100vw;
   border-bottom: 0px solid #dedede;
-  padding: 2vw 2vw;
+  padding: 1vw 2vw;
   background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .app-nav-logo{
-  height: 2vw;
+  height: 1.8vw;
   margin-left: 2vw;
 }
 
@@ -366,7 +383,7 @@ body::-webkit-scrollbar {
   width: 96vw;
 }
 .explore-content{
-  margin-left: 4vw;
+  margin-left: 0vw;
   margin-top: 6vw;
   width: 40vw;
 }
@@ -381,10 +398,11 @@ body::-webkit-scrollbar {
 }
 .explore-filters{
   position: fixed;
-  width: 42vw;
+  width: 48vw;
   height: auto;
-  padding: 1vw 0;
-  background-color: #F7FAFC; /* Replace with your desired background color */
+  padding: 1vw 0 1vw 0;
+  padding-left: 4vw;
+  border-bottom: 0px solid #e4e4e4;
   z-index: 1;
 }
 
@@ -436,7 +454,8 @@ body::-webkit-scrollbar {
 
 /* Your CSS file or style block */
 .cards-container {
-  margin-top: 6vh;
+  margin-top: 5vh;
+  margin-left: 4vw;
   height: 81vh;
   width: 50vw;
   overflow-y: scroll;
@@ -457,6 +476,7 @@ body::-webkit-scrollbar {
   border: 1px solid #ececec !important;
   width: 19vw !important;
   padding: 0 0 1.4vw 0 !important;
+  border-radius: 1.5vw !important;
   box-shadow: none !important;
 }
 
@@ -467,17 +487,19 @@ body::-webkit-scrollbar {
 }
 
 .card-details {
-  margin-left: 1vw;
+  margin-left: 0vw;
 }
 
 .card-title {
   margin-top: 1.5vw;
+  margin-left: 1vw;
   font-weight: medium;
   font-size: 1.2vw;
 }
 
 .card-price {
   margin-top: 0.5vw;
+  margin-left: 1vw;
   font-size: 0.9vw;
   color: black;
 }
@@ -487,13 +509,21 @@ body::-webkit-scrollbar {
   color: gray;
   align-items: center;
   margin-top: 1vw;
+  margin-left: 1vw;
   justify-content: space-between;
   width: 14vw;
+}
+.card-info>p{
+  background: rgb(242, 242, 242);
+  padding: 0.1vw 0.5vw;
+  font-size: 0.8vw;
+  border-radius: 1vw;
 }
 
 .view-button {
   background-color: #007bff;
   color: white;
+  margin-left: 1vw;
   margin-right: 0.7vw;
   margin-top: 1vw;
   border: none;
@@ -514,16 +544,17 @@ body::-webkit-scrollbar {
   margin-left: 5vw;
   margin-top: 48vh;
   padding-top: 0;
-  border-radius: 0.7vw;
+  border-radius: 1.5vw;
   height: 40vh;
   background: white;
 }
 
 .property-image {
-  width: 27vw;
-  height: 40vh;
-  margin-left: 0;
-  border-radius: 0.5vw 0 0 0.5vw;
+  width: 26vw;
+  height: 36vh;
+  margin-top: 2vh;
+  margin-left: 1vw;
+  border-radius: 1vw;
 }
 
 .property-details {
@@ -536,23 +567,31 @@ body::-webkit-scrollbar {
   font-weight: semibold;
   width: 10vw;
   line-height: 2vw;
-  font-size: 1.4vw;
+  font-size: 1.3vw;
 }
 
 .property-info {
-  font-size: 1vw;
-  color: #B9b9b9;
-  margin-top: 1vw;
+  font-size: 0.8vw;
+  color: #858585;
+  margin-top: 0.8vw;
+  display: flex;
+}
+.property-info>p{
+  background: rgb(242, 242, 242);
+  padding: 0.1vw 0.5vw;
+  margin-right: 0.6vw;
+  border-radius: 3vw;
 }
 
 .property-listed-by {
-  margin-top: 3vw;
+  margin-top: 4vw;
   color: #B9b9b9;
 }
 
 .property-owner-info {
   font-size: 1vw;
-  margin-top: 0.5vw;
+  margin-top: 0vw;
+  margin-bottom: 1vw;
 }
 
 .close-button {
@@ -642,11 +681,13 @@ body::-webkit-scrollbar {
   
   .button-primary{
     font-size: 3vw !important;
+    border-radius: 10vw !important;
     padding: 3vw 4vw !important;
 
   }
   .button-secondary{
     font-size: 3vw !important;
+    border-radius: 10vw !important;
     padding: 3vw 4vw !important;
   }
   .phone-input-addon{
@@ -715,10 +756,14 @@ body::-webkit-scrollbar {
     width: 20vw;
   }
   .landing-hero{
-    height: 100vh;
+    height: 70vh;
+    width: 86vw;
+    border-radius: 6vw;
   }
   .landing-hero::after{
-    height: 100vh;
+    height: 70vh;
+    width: 86vw;
+    border-radius: 6vw;
   }
 
   .landing-hero-text{
@@ -728,10 +773,13 @@ body::-webkit-scrollbar {
     width: 40vw;
     line-height: 8vw;
   }
+  .landing-tag{
+    margin-top: 30vw;
+    font-size: 2.8vw !important;
+  }
   .landing-hero-heading{
     font-size: 6vh;
     width: 90vw;
-    margin-top: 80vw !important;
     font-weight: 700 !important;
   }
 
@@ -745,6 +793,7 @@ body::-webkit-scrollbar {
 
   .landing-display-heading{
     margin-top: 0.5vw !important;
+    font-size: 10vw !important;
   }
   .landing-display-button{
     margin-top: 4vw;
@@ -799,7 +848,7 @@ body::-webkit-scrollbar {
   .landing-section-text {
     margin-top: 2vw;
     font-size: 3vw;
-    width: 60vw !important;
+    width: 70vw !important;
     padding: 4vw 7vw;
     line-height: 6vw;
     border-radius: 1vw;
@@ -807,12 +856,12 @@ body::-webkit-scrollbar {
   .landing-section-graphic{
     width: 60vw !important;
     margin-right: 25vw;
-    margin-top: 46vw;
+    margin-top: 70vw;
   }
 
 .footer-title {
-  font-size: 5vw;
-  width: 70vw;
+  font-size: 7vw;
+  width: 90vw;
   margin-top: 20vw;
 }
 
@@ -909,13 +958,14 @@ body::-webkit-scrollbar {
 }
 .explore-content{
   margin-left: 4vw;
-  margin-top: 40vh;
+  margin-top: 54vh;
+  height: 40vh;
   width: 100vw !important;
 }
 .explore-map{
   top: 5.5vh;
   right: 0;
-  height: 34vh;
+  height: 44vh;
   width: 100vw;
 }
 .explore-filters{
@@ -929,7 +979,8 @@ body::-webkit-scrollbar {
 .cards-container {
   margin-top: 6vh;
   height: 51vh;
-  width: 98vw;
+  margin-left: 0vw !important;
+  width: 100vw;
   overflow-y: hidden;
   overflow-x: scroll;
 }
@@ -938,15 +989,16 @@ body::-webkit-scrollbar {
   display: flex !important;
   flex-wrap:wrap !important;
   flex-direction: row;
-  width: 180vw !important;
+  width: 200vw !important;
 }
 
 .card-element {
   margin-right: 6vw;
   margin-top: 3vw;
+  border-radius: 6vw !important;
   background: #fff;
   border: 1px solid #ececec !important;
-  width: 50vw !important;
+  width: 60vw !important;
   padding: 0 0 4vw 0 !important;
   box-shadow: none !important;
 }
@@ -958,11 +1010,17 @@ body::-webkit-scrollbar {
 }
 
 .card-details {
-  margin-left: 3vw;
+  margin-left: 0vw;
 }
-
+.card-info>p{
+  padding: 1vw 2vw;
+  font-size: 2.6vw;
+  margin-right: 2vw !important;
+  border-radius: 10vw;
+}
 .card-title {
   margin-top: 4vw;
+  margin-left: 6vw;
   font-weight: medium !important;
   font-size: 4vw;
 }
@@ -970,21 +1028,24 @@ body::-webkit-scrollbar {
 .card-price {
   margin-top: 0.5vw;
   font-size: 3vw;
+  margin-left: 6vw;
   color: black;
 }
 
 .card-info {
   font-size: 2.6vw;
   color: gray;
-  align-items: center;
-  margin-top: 2vw;
-  justify-content: space-between;
-  width: 38vw;
+  align-items: flex-start !important;
+  margin-top: 4vw;
+  margin-left: 6vw;
+  justify-content: flex-start;
+  width: 52vw;
 }
 
 .view-button {
   background-color: #007bff;
   color: white;
+  margin-left: 6vw;
   margin-right: 0.7vw;
   margin-top: 3vw;
   border: none;
@@ -1000,7 +1061,7 @@ body::-webkit-scrollbar {
   z-index: 3;
   width: 90vw;
   margin-left: 5vw;
-  margin-top: 10vh !important;
+  margin-top: 15vh !important;
   padding-top: 0;
   border-radius: 2vw;
   height: 22vh !important;
@@ -1008,10 +1069,11 @@ body::-webkit-scrollbar {
 }
 
 .property-image {
-  width: 48vw;
-  height: 22vh !important;
-  margin-left: 0;
-  border-radius: 2vw 0 0 2vw;
+  width: 49vw;
+  margin-top: 2vw;
+  height: 20vh !important;
+  margin-left: 2vw;
+  border-radius: 2vw;
 }
 
 .property-details {
@@ -1022,30 +1084,32 @@ body::-webkit-scrollbar {
 
 .property-title {
   font-weight: semibold;
-  width: 30vw;
+  width: 28vw;
   line-height: 6vw;
-  font-size: 4vw;
+  font-size: 3.7vw;
 }
 
 .property-info {
-  font-size: 2.8vw;
+  font-size: 2.6vw;
   color: #B9b9b9;
   margin-top: 1vw;
 }
 
 .property-listed-by {
   margin-top: 3vw;
+  font-size: 2.8vw;
   color: #B9b9b9;
 }
 
 .property-owner-info {
   font-size: 2.8vw;
-  margin-top: 0.5vw;
+  margin-top: 0vw;
 }
 
 .close-button {
   margin-top: 0.5vw;
   margin-right: 2vw;
+  margin-left: -2vw;
 }
 
 .post-flex{

@@ -1,7 +1,7 @@
 import { Box, Flex, Image } from '@chakra-ui/react'
 import React from 'react'
 
-import branding from '../assets/img/branding.png'
+import branding from '../assets/img/branding_light.png'
 import { Link } from 'react-router-dom'
 import NavMenu from '../core/Menu'
 

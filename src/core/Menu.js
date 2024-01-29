@@ -8,14 +8,14 @@ export default function NavMenu(props) {
   return (
     <Flex zIndex='3' justify='flex-end'>  
     <Menu w='10vw'  zIndex='3'>
-    <MenuButton className='nav-menu' bg='white' border='1px solid #ECECEC' as={Button} rightIcon={<IoChevronDownOutline />} zIndex='3'>
+    <MenuButton className='nav-menu' bg='white' borderRadius='10vw' border='1px solid #ECECEC' as={Button} rightIcon={<IoChevronDownOutline />} zIndex='3'>
     User
     </MenuButton>
     <MenuList fontFamily='inter' justifyContent='flex-end' className='nav-menu-list' zIndex='3'>
         <Link to='/app'><MenuItem>Explore</MenuItem></Link> 
         <Link to='/post'><MenuItem>Post</MenuItem></Link> 
         <Link to='/listings'><MenuItem>Listings</MenuItem></Link> 
-        <Link to='/app'><MenuItem onClick={()=>props.logout()}>Log Out </MenuItem></Link> 
+        <Link to='/login'><MenuItem>Log Out </MenuItem></Link> 
     </MenuList>
     </Menu>
     </Flex>

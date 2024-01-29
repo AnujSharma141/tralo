@@ -1,7 +1,8 @@
 import { Box, Button, FormControl, HStack, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, PinInput, PinInputField, Text, useDisclosure, useToast } from '@chakra-ui/react'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function OtpForm({login, validate, setLogin, setRequested}) {
+export default function OtpForm({login, setLogin, setRequested}) {
   const toast = useToast()
   const createUser = () => {
     toast({
@@ -32,7 +33,11 @@ export default function OtpForm({login, validate, setLogin, setRequested}) {
             </PinInput>
           </HStack>
         </Box>
-        <Button className='button-primary login-form-button' type='submit' onClick={login?()=>validate(): ()=>{createUser(); setLogin(true); setRequested(false)}}   mt='2vw' >Verify</Button>
+        {!login?
+        <Button className='button-primary login-form-button' type='submit' onClick={()=>{createUser(); setLogin(true); setRequested(false)}}   mt='2vw' >Verify</Button>:
+        <Link to='/app'><Button className='button-primary login-form-button' type='submit'  mt='2vw' >Verify</Button></Link>
+        }
+        
 
       </FormControl>
   )

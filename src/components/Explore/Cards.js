@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Card, Center, Flex, Input, Image, Heading, Text, Button, Avatar, MenuButton, Menu, MenuList, MenuItem } from '@chakra-ui/react'
+import { Box, Card, Center, Flex, Input, Image, Heading, Text, Button, Avatar, MenuButton, Menu, MenuList, MenuItem, Divider } from '@chakra-ui/react'
 
 export default function Cards(props) {
     const focus = (item) =>{
@@ -12,10 +12,10 @@ export default function Cards(props) {
     <Flex className="cards-flex">
       {props.list.map((item, index) => (
         <Card key={index} className="card-element">
-          <Image src={item.url} alt={item.name} className="card-image" />
           <Box className="card-details">
             <Text className="card-title">{item.name}</Text>
             <Text className="card-price">from Rs {item.price}</Text>
+            <Divider mt='4'/>
             <Flex className="card-info" >
               <Text>{item.city}, {item.state}</Text>
               <Text>{item.property} BHK</Text>
